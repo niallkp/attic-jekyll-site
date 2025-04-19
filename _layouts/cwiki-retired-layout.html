@@ -1,0 +1,5 @@
+{%- if page.cwiki_key == page.project_id -%}
+  {{ page.project_id }}
+{%- else -%}
+  {{ page.project_id }}: {{ page.cwiki_key }}
+{%- endif -%}
