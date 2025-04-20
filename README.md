@@ -49,9 +49,9 @@ The [Attic Website](https://attic.apache.org) is composed of the following:
     details about the project and its retirement
   - The _Process Tracking_ (`tracking.md`) page which generates a table showing the status of each
     project generated from the files in `_data/projects' directory.
-  - (Jekyll Plugins)[https://jekyllrb.com/docs/plugins/] which generate pages and files for the
+  - [Jekyll Plugins](https://jekyllrb.com/docs/plugins/) which generate pages and files for the
     retired projects from the files in `_data/projects' directory:
-    - `_plugins/projects-plugin.rb` generates the (project pages)[https://attic.apache.org/projects/]
+    - `_plugins/projects-plugin.rb` generates the [project pages](https://attic.apache.org/projects/)
       from the project's `yaml` data file.
     - `_plugins/attic-banner-plugin.rb` generates a _flag_ file to indicate that the _Attic Banner_
       should be added to a project's website (based on the project's `yaml` data file).
@@ -61,19 +61,21 @@ The [Attic Website](https://attic.apache.org) is composed of the following:
 ## Project YAML Data File
 
 The project YAML files contain the following information in order to generate the project pages:
-  - **Retirement Date**
+  - **Retirement Date** (usually the date of the board meeting the project was terminated)
   - **JIRA ID** of the ticket used to track the project's move to the Attic
   - **Completion Date** of the project's move to the Attic
   - **Project Description**
-  - **Source Code** repositories
+  - **Source Code** repositorie(s)
   - **Mailing Lists**
-  - **Issue Trackers**
-  - **Wiki** spaces
+  - **Issue Tracker(s)**
+  - **Wiki** space(s)
   - **Download Details**
   - **Related Projects**
 
 Creating/Updating a project's YAML file updates the project page, updates the Tracking page
 and generates any required flags for the project's website and wiki.
+
+The structure of the project YAML file is shown below:
 
 ```yaml
 retirement_date:                 ### [REQUIRED] Date the project retired (yyyy-mm-dd)                             
