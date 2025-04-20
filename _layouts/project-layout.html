@@ -14,14 +14,19 @@ layout: attic-layout
 <h1>{{ project_longname }}</h1>
 
 <p>
-  <a href="https://{{ project_domain }}/">{{ project_longname }}</a> moved to the Attic in
+  <a href="https://{{ project_domain }}/">{{ project_longname }}</a> retired in
   <b>
   {%- if page.board_resolution == true -%}
-    <a href="{{ resolution_locn }}">{{ page.retirement_date | date: "%B %Y" }}.</a>
+    <a href="{{ resolution_locn }}">{{ page.retirement_date | date: "%B %Y" }}</a>
   {%- else -%}
-    {{ page.retirement_date | date: "%B %Y" }}.
+    {{ page.retirement_date | date: "%B %Y" }}
   {%- endif -%}
   </b>
+  {%- if page.attic_date %}
+    and the move to the Attic was completed in <b>{{ page.attic_date | date: "%B %Y" }}</b>.
+  {%- else -%}
+    and the move to the Attic is <b><i>In Progress</i></b> (see <a href="/templates/{{page.project_id}}.html">templates for {{project_name}}</a>).
+  {%- endif -%}
 </p>
 
 {%- if page.project_description %}
