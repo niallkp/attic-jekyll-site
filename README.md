@@ -29,7 +29,6 @@ site locally.
 ## TODO
 This Poc is functional but there are a number of tasks remaining:
   - Create data files for all Attic projects (currently only 13 are done)
-  - Convert XDOC home & process pages to markdown
   - Fix the Look & Feel
     - currently using the default Jekyll **Minima** theme
     - need to decide how the website should look and fix the page layout and how it looks
