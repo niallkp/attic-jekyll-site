@@ -65,6 +65,24 @@ layout: attic-layout
   </tr>
 {%- endif %}
 
+{%- if page.source_repositories %}
+  {%- for source_repo in page.source_repositories %}
+  <tr>
+    <td>Source Code ({{ source_repo.type}})</td>
+    {%- case source_repo.type %}
+    {%- when "Subversion" %}
+      {%- assign svn_path = source_repo.path | default: page.project_id | prepend: "svn.apache.org/repos/asf/" %}
+      <td><a href="https:{{ svn_path }}/">{{ svn_path }}</a></td>
+    {%- when "Git" %}
+      {%- assign git_path = source_repo.path | default: page.project_id | prepend: "gitbox.apache.org/repos/asf#" %}
+      <td><a href="https:{{ git_path }}">{{ git_path }}</a></td>
+    {%- else %}
+      <td>??? {{ source_repo.type}} ???</td>
+    {%- endcase %}
+  </tr>
+  {%- endfor %}
+{%- endif %}
+
 {%- if page.issue_tracker.type %}
   <tr>
     <td>Issue Tracker ({{ page.issue_tracker.type }})</td>
@@ -103,24 +121,6 @@ layout: attic-layout
       <td>??? {{ page.wiki.type}} ???</td>
     {%- endcase %}
   </tr>
-{%- endif %}
-
-{%- if page.source_repositories %}
-  {%- for source_repo in page.source_repositories %}
-  <tr>
-    <td>Source Code ({{ source_repo.type}})</td>
-    {%- case source_repo.type %}
-    {%- when "Subversion" %}
-      {%- assign svn_path = source_repo.path | default: page.project_id | prepend: "svn.apache.org/repos/asf/" %}
-      <td><a href="https:{{ svn_path }}/">{{ svn_path }}</a></td>
-    {%- when "Git" %}
-      {%- assign git_path = source_repo.path | default: page.project_id | prepend: "gitbox.apache.org/repos/asf#" %}
-      <td><a href="https:{{ git_path }}">{{ git_path }}</a></td>
-    {%- else %}
-      <td>??? {{ source_repo.type}} ???</td>
-    {%- endcase %}
-  </tr>
-  {%- endfor %}
 {%- endif %}
 
 {%- if page.board_reports == true %}
