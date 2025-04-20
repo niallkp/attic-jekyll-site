@@ -5,6 +5,7 @@ attic_date: yyyy-mm-dd           ### [OPTIONAL] Date the move to the Attic was c
 attic_banner: true               ### [OPTIONAL] Valid values: true/false
 revivied_date: yyyy-mm-dd        ### [OPTIONAL] Date the project was revived - moved out of the Attic
 project_name: [Another Name]     ### [OPTIONAL] defaults to this file name
+project_longname:                ### [OPTIONAL] defaults to this file name
 project_domain: [alt domain]     ### [OPTIONAL] defaults to this file name + ".apache.org"
 project_description: >-
     [Project description here]
@@ -23,7 +24,7 @@ mailing_lists:
     - user
 mailing_lists_prefix:            ### [OPTIONAL] Defaults to this file name
 issue_tracker:
-    type: JIRA                   ### [REQUIRED] Valid Values: JIRA
+    type: JIRA                   ### [REQUIRED] Valid Values: JIRA, Bugzilla
     keys:
       - JIRA_KEY_1               ### [OPTIONAL] Defaults to this file name
 wiki:
