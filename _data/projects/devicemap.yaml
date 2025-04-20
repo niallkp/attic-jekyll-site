@@ -1,0 +1,21 @@
+---
+retirement_date: 2016-12-21
+attic_issue: ATTIC-161
+attic_date: 2017-01-01
+attic_banner: false
+project_name: DeviceMap
+project_description: >-
+
+board_resolution: true
+board_reports: true
+downloads: true
+source_repositories:
+    - type: Git
+mailing_lists:
+    - dev
+    - commits
+    - user
+issue_tracker:
+    type: JIRA
+wiki:
+    type: CWIKI

@@ -1,6 +1,7 @@
 ---
 retirement_date: 2010-06-16
 attic_date: 2010-06-01
+attic_banner: false
 project_domain: quetz.apache.org
 project_description: >-
      Quetzalcoatl, or Quetz as it was more commonly known, was a project charged

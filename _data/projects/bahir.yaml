@@ -1,0 +1,22 @@
+---
+retirement_date: 2024-01-17
+attic_issue: ATTIC-220
+attic_date: 2024-05-01
+attic_banner: true
+project_name: Bahir
+project_description: >-
+
+board_resolution: true
+board_reports: true
+downloads: true
+source_repositories:
+    - type: Git
+mailing_lists:
+    - dev
+    - commits
+    - user
+issue_tracker:
+    type: JIRA
+wiki:
+    type: CWIKI
+
