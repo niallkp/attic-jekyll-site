@@ -1,9 +1,9 @@
-
+<b>Projects in the Attic</b>
     <ul>
 {%- for proj_hash in site.data.projects %}
   {%- assign project_id = proj_hash[0] %}
   {%- assign default_name = project_id | capitalize %}
   {%- assign project_name = proj_hash[1].project_name | default: default_name %}
-      <li><a href="/projects/{{ project_id }}.html">{{ project_name }}</a></li>
+      <li><a href="{{ site.baseurl }}/projects/{{ project_id }}.html">{{ project_name }}</a></li>
 {%- endfor %}
     </ul>

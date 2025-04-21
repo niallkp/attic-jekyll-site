@@ -22,10 +22,11 @@ layout: attic-layout
     {{ page.retirement_date | date: "%B %Y" }}
   {%- endif -%}
   </b>
+  and the move to the Attic
   {%- if page.attic_date %}
-    and the move to the Attic was completed in <b>{{ page.attic_date | date: "%B %Y" }}</b>.
+    was completed in <b>{{ page.attic_date | date: "%B %Y" }}</b>.
   {%- else -%}
-    and the move to the Attic is <b><i>In Progress</i></b> (see <a href="/templates/{{page.project_id}}.html">templates for {{project_name}}</a>).
+    &nbsp;is <b><i>In Progress</i></b> (see <a href="{{ site.baseurl }}/templates/{{page.project_id}}.html">templates for {{project_name}}</a>).
   {%- endif -%}
 </p>
 
@@ -72,10 +73,10 @@ layout: attic-layout
     {%- case source_repo.type %}
     {%- when "Subversion" %}
       {%- assign svn_path = source_repo.path | default: page.project_id | prepend: "svn.apache.org/repos/asf/" %}
-      <td><a href="https:{{ svn_path }}/">{{ svn_path }}</a></td>
+      <td><a href="https://{{ svn_path }}/">{{ svn_path }}</a></td>
     {%- when "Git" %}
       {%- assign git_path = source_repo.path | default: page.project_id | prepend: "gitbox.apache.org/repos/asf#" %}
-      <td><a href="https:{{ git_path }}">{{ git_path }}</a></td>
+      <td><a href="https://{{ git_path }}">{{ git_path }}</a></td>
     {%- else %}
       <td>??? {{ source_repo.type}} ???</td>
     {%- endcase %}
@@ -146,7 +147,7 @@ layout: attic-layout
     <td>Downloads</td>
     <td>
       <a href="https://{{ archive_domain }}/">{{ archive_domain }}</a> | 
-      <a href="https:{{archive_domain}}/KEYS">KEYS</a>
+      <a href="https://{{archive_domain}}/KEYS">KEYS</a>
     </td>
   </tr>
 {% endif -%}

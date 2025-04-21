@@ -25,7 +25,7 @@ title: Process Tracking
         <tr>
           <td>{{ project.retirement_date | date: list_date_fmt }}</td>
           <td>{{ project.attic_date | date: list_date_fmt }}</td>
-          <td><a href="/projects/{{ project_id }}.html">Apache {{ project_name }}</a></td>
+          <td><a href="{{ site.baseurl }}/projects/{{ project_id }}.html">Apache {{ project_name }}</a></td>
           <td>
           {%- if project.attic_issue -%}
             <a href="https://issues.apache.org/jira/browse/{{ project.attic_issue }}">{{ project.attic_issue }}</a>
