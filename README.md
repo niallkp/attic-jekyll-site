@@ -37,6 +37,9 @@ This Poc is functional but there are a number of tasks remaining:
   - decide what to do about **revived** projects. From what I can see only
     **XMLBeans** & **Ambari** have been revived. We don't include Ambari but we
     have a page for XMLBeans (I think we don't bother with them)
+  - Add script to generate _data/projects/<project>.yaml file from project id.
+    Could this be a GHA that creates a PR?
+    (I think any automatically created content needs to be reviewed before deployment)
 
 
 ## Overview
