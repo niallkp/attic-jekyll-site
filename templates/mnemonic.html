@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Apache Attic | The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life.</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Apache Attic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life." />
+<meta property="og:description" content="The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life." />
+<link rel="canonical" href="https://attic.apache.org/attic-jekyll-site/templates/mnemonic.html" />
+<meta property="og:url" content="https://attic.apache.org/attic-jekyll-site/templates/mnemonic.html" />
+<meta property="og:site_name" content="Apache Attic" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Apache Attic" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life.","headline":"Apache Attic","url":"https://attic.apache.org/attic-jekyll-site/templates/mnemonic.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/attic-jekyll-site/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://attic.apache.org/attic-jekyll-site/feed.xml" title="Apache Attic" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/attic-jekyll-site/">Apache Attic</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/attic-jekyll-site/">The Apache Attic</a><a class="page-link" href="/attic-jekyll-site/process.html">Process</a><a class="page-link" href="/attic-jekyll-site/resolution.html">Resolution</a><a class="page-link" href="/attic-jekyll-site/tracking.html">Process Tracking</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <table width = "100%" border = "0">
+<tr  valign = "top">
+<td width = "80%">
+    
+
+<h1>Templates for Mnemonic Retirement</h1>
+<p>
+Return to the <a href="/attic-jekyll-site/projects/mnemonic.html">Mnemonic summary</a>
+</p>
+
+<h4>Infra JIRA Template</h4>
+
+<p>
+Use the markup below to create an Infra JIRA for the project's move to the Attic:
+</p>
+
+<pre>
+   TBA
+</pre>
+
+<h4>Attic JIRA Template</h4>
+
+<p>
+Use the markup below to create an Attic JIRA for the project's move to the Attic:
+</p>
+
+<pre>
+# Confirm [Board Resolution|https://svn.apache.org/repos/asf/infrastructure/site/trunk/content/foundation/records/minutes/2025/board_minutes_2025_02_19.txt] (!)
+# Create the project YAML data file in the [_data/projects|https://github.com/apache/attic/tree/main/_data/projects] directory in the Attic site. (!)
+# Ensure the: [attic.apache.org/projects/mnemonic|https://attic.apache.org/projects/mnemonic.html] page has been generated(!)
+# Inform [dev|https://lists.apache.org/thread/xxxxxxxxxx] of the move to the Attic (!) 
+# Ensure [original project site|http://mnemonic.apache.org/] pages carry the Attic banner (!)
+# Ensure the Wiki pages (see links on the [mnemonic|https://attic.apache.org/projects/mnemonic.html] page) carry the Attic banner (!)
+# Update the project DOAP file (if any) or copy to [projects-override|https://svn.apache.org/repos/asf/comdev/projects.apache.org/trunk/data/projects-override/]: (!)
+# Get infra lock down project's resources (!)
+# Announce on [announce at apache.org|http://mail-archives.apache.org/mod_mbox/www-announce/] (!)
+
+See [http://attic.apache.org/process.html#howto] for detailed instructions
+</pre>
+
+<h4>User Email Template</h4>
+
+<p>
+Let the users know that the PMC is moving into the Attic. Use the following text:
+</p>
+
+<pre>
+A heads up for the Mnemonic user community that the Mnemonic  PMC has
+been 'moved to the Attic'. This means that the Mnemonic  developers (more
+formally its Project Management Committee) have voted to retire Mnemonic 
+and move the responsibility for its oversight over to the Attic project.
+
+Loosely speaking this means that the projects resources will be moved to a
+read-only state.
+
+You can read more about the Apache Attic and the process of moving to the
+Attic at https://attic.apache.org.
+
+You can follow this process in JIRA:
+
+https://issues.apache.org/jira/browse/ATTIC-233
+
+Thanks,
+
+${NAME}
+on behalf of Mnemonic project and the Apache Attic.
+</pre>
+
+<h4>Announcement Email Template</h4>
+
+<p>
+Consider the following template when announcing that the project is now retired:
+</p>
+
+<pre>
+Announcing that the Apache Mnemonic committers have voted to retire
+the project due to inactivity. Mnemonic was a transparent nonvolatile hybrid memory oriented library for Big data, High-performance computing, and Analytics..
+
+Retiring a project is not as simple as turning everything off, as
+existing users need to both know that the project is retiring and
+retain access to the necessary information for their own development
+efforts.
+
+You can read more about Mnemonic's retirement at:
+
+   https://attic.apache.org/projects/mnemonic.html
+
+The project's resources will continue to be available in a read-only state -
+website, mailing lists, wikis, git, downloads and bug tracker with no 
+change in url.
+
+Providing process and solutions to make it clear when an Apache
+project has reached its end of life is the role of the Apache Attic,
+and you can read more about that at:
+
+   https://attic.apache.org/
+
+Thanks,
+
+${NAME}
+on behalf of the Apache Attic and the now retired Mnemonic project
+</pre>
+
+</td>
+<td width = "20%"><b>Projects in the Attic</b>
+    <ul>
+      <li><a href="/attic-jekyll-site/projects/abdera.html">Abdera</a></li>
+      <li><a href="/attic-jekyll-site/projects/ace.html">Ace</a></li>
+      <li><a href="/attic-jekyll-site/projects/any23.html">Any23</a></li>
+      <li><a href="/attic-jekyll-site/projects/apex.html">Apex</a></li>
+      <li><a href="/attic-jekyll-site/projects/archiva.html">Archiva</a></li>
+      <li><a href="/attic-jekyll-site/projects/aurora.html">Aurora</a></li>
+      <li><a href="/attic-jekyll-site/projects/avalon.html">Avalon</a></li>
+      <li><a href="/attic-jekyll-site/projects/axis-sandesha-c.html">Axis Sandesha2/C</a></li>
+      <li><a href="/attic-jekyll-site/projects/axis-savan-c.html">Axis Savan/C</a></li>
+      <li><a href="/attic-jekyll-site/projects/axis-savan-java.html">Axis Savan/Java</a></li>
+      <li><a href="/attic-jekyll-site/projects/axkit.html">Axkit</a></li>
+      <li><a href="/attic-jekyll-site/projects/bahir.html">Bahir</a></li>
+      <li><a href="/attic-jekyll-site/projects/beehive.html">Beehive</a></li>
+      <li><a href="/attic-jekyll-site/projects/bloodhound.html">Bloodhound</a></li>
+      <li><a href="/attic-jekyll-site/projects/buildr.html">Buildr</a></li>
+      <li><a href="/attic-jekyll-site/projects/chemistry.html">Chemistry</a></li>
+      <li><a href="/attic-jekyll-site/projects/chukwa.html">Chukwa</a></li>
+      <li><a href="/attic-jekyll-site/projects/clerezza.html">Clerezza</a></li>
+      <li><a href="/attic-jekyll-site/projects/click.html">Click</a></li>
+      <li><a href="/attic-jekyll-site/projects/climate.html">Open Climate Workbench</a></li>
+      <li><a href="/attic-jekyll-site/projects/cocoon.html">Cocoon</a></li>
+      <li><a href="/attic-jekyll-site/projects/continuum.html">Continuum</a></li>
+      <li><a href="/attic-jekyll-site/projects/crimson.html">Crimson</a></li>
+      <li><a href="/attic-jekyll-site/projects/crunch.html">Crunch</a></li>
+      <li><a href="/attic-jekyll-site/projects/deltacloud.html">Deltacloud</a></li>
+      <li><a href="/attic-jekyll-site/projects/devicemap.html">DeviceMap</a></li>
+      <li><a href="/attic-jekyll-site/projects/directmemory.html">DirectMemory</a></li>
+      <li><a href="/attic-jekyll-site/projects/drat.html">DRAT</a></li>
+      <li><a href="/attic-jekyll-site/projects/eagle.html">Eagle</a></li>
+      <li><a href="/attic-jekyll-site/projects/esme.html">ESME</a></li>
+      <li><a href="/attic-jekyll-site/projects/etch.html">Etch</a></li>
+      <li><a href="/attic-jekyll-site/projects/excalibur.html">Excalibur</a></li>
+      <li><a href="/attic-jekyll-site/projects/falcon.html">Falcon</a></li>
+      <li><a href="/attic-jekyll-site/projects/forrest.html">Forrest</a></li>
+      <li><a href="/attic-jekyll-site/projects/giraph.html">Giraph</a></li>
+      <li><a href="/attic-jekyll-site/projects/gora.html">Gora</a></li>
+      <li><a href="/attic-jekyll-site/projects/hama.html">Hama</a></li>
+      <li><a href="/attic-jekyll-site/projects/harmony.html">Harmony</a></li>
+      <li><a href="/attic-jekyll-site/projects/hawq.html">HAWQ</a></li>
+      <li><a href="/attic-jekyll-site/projects/hivemind.html">HiveMind</a></li>
+      <li><a href="/attic-jekyll-site/projects/ibatis.html">iBATIS</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-cactus.html">Jakarta Cactus</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-ecs.html">Jakarta ECS</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-oro.html">Jakarta ORO</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-regexp.html">Jakarta Regexp</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-slide.html">Jakarta Slide</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-taglibs.html">Jakarta Taglibs</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta.html">Jakarta</a></li>
+      <li><a href="/attic-jekyll-site/projects/joshua.html">Joshua</a></li>
+      <li><a href="/attic-jekyll-site/projects/juddi.html">jUDDI</a></li>
+      <li><a href="/attic-jekyll-site/projects/labs.html">Labs</a></li>
+      <li><a href="/attic-jekyll-site/projects/lens.html">Lens</a></li>
+      <li><a href="/attic-jekyll-site/projects/lenya.html">Lenya</a></li>
+      <li><a href="/attic-jekyll-site/projects/lucy.html">Lucy</a></li>
+      <li><a href="/attic-jekyll-site/projects/marmotta.html">Marmotta</a></li>
+      <li><a href="/attic-jekyll-site/projects/metamodel.html">MetaModel</a></li>
+      <li><a href="/attic-jekyll-site/projects/metron.html">Metron</a></li>
+      <li><a href="/attic-jekyll-site/projects/mnemonic.html">Mnemonic</a></li>
+      <li><a href="/attic-jekyll-site/projects/mrunit.html">MRUnit</a></li>
+      <li><a href="/attic-jekyll-site/projects/muse.html">WS Muse</a></li>
+      <li><a href="/attic-jekyll-site/projects/mxnet.html">MXNet</a></li>
+      <li><a href="/attic-jekyll-site/projects/ode.html">ODE</a></li>
+      <li><a href="/attic-jekyll-site/projects/ojb.html">ObJectRelationalBridge (OJB)</a></li>
+      <li><a href="/attic-jekyll-site/projects/oltu.html">Oltu</a></li>
+      <li><a href="/attic-jekyll-site/projects/onami.html">Onami</a></li>
+      <li><a href="/attic-jekyll-site/projects/oodt.html">OODT</a></li>
+      <li><a href="/attic-jekyll-site/projects/oozie.html">Oozie</a></li>
+      <li><a href="/attic-jekyll-site/projects/pivot.html">Pivot</a></li>
+      <li><a href="/attic-jekyll-site/projects/polygene.html">Polygene</a></li>
+      <li><a href="/attic-jekyll-site/projects/predictionio.html">PredictionIO</a></li>
+      <li><a href="/attic-jekyll-site/projects/quetzalcoatl.html">Quetzalcoatl</a></li>
+      <li><a href="/attic-jekyll-site/projects/rave.html">Rave</a></li>
+      <li><a href="/attic-jekyll-site/projects/reef.html">REEF</a></li>
+      <li><a href="/attic-jekyll-site/projects/river.html">River</a></li>
+      <li><a href="/attic-jekyll-site/projects/sentry.html">Sentry</a></li>
+      <li><a href="/attic-jekyll-site/projects/shale.html">Shale</a></li>
+      <li><a href="/attic-jekyll-site/projects/shindig.html">Shindig</a></li>
+      <li><a href="/attic-jekyll-site/projects/sqoop.html">Sqoop</a></li>
+      <li><a href="/attic-jekyll-site/projects/stanbol.html">Stanbol</a></li>
+      <li><a href="/attic-jekyll-site/projects/stdcxx.html">C++ Standard Library</a></li>
+      <li><a href="/attic-jekyll-site/projects/stratos.html">Stratos</a></li>
+      <li><a href="/attic-jekyll-site/projects/streams.html">Streams</a></li>
+      <li><a href="/attic-jekyll-site/projects/submarine.html">Submarine</a></li>
+      <li><a href="/attic-jekyll-site/projects/tajo.html">Tajo</a></li>
+      <li><a href="/attic-jekyll-site/projects/tiles.html">Tiles</a></li>
+      <li><a href="/attic-jekyll-site/projects/trafodion.html">Trafodion</a></li>
+      <li><a href="/attic-jekyll-site/projects/tuscany.html">Tuscany</a></li>
+      <li><a href="/attic-jekyll-site/projects/twill.html">Twill</a></li>
+      <li><a href="/attic-jekyll-site/projects/usergrid.html">Usergrid</a></li>
+      <li><a href="/attic-jekyll-site/projects/vxquery.html">VXQuery</a></li>
+      <li><a href="/attic-jekyll-site/projects/whirr.html">Whirr</a></li>
+      <li><a href="/attic-jekyll-site/projects/wink.html">Wink</a></li>
+      <li><a href="/attic-jekyll-site/projects/wookie.html">Wookie</a></li>
+      <li><a href="/attic-jekyll-site/projects/xang.html">Xang</a></li>
+      <li><a href="/attic-jekyll-site/projects/xindice.html">Xindice</a></li>
+      <li><a href="/attic-jekyll-site/projects/xml.html">XML</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/attic-jekyll-site/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Apache Attic</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Apache Attic</li><li><a class="u-email" href="mailto:general@apache.attic.org">general@apache.attic.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

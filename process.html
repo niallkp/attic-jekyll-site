@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Process | Apache Attic</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Process" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life." />
+<meta property="og:description" content="The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life." />
+<link rel="canonical" href="https://attic.apache.org/attic-jekyll-site/process.html" />
+<meta property="og:url" content="https://attic.apache.org/attic-jekyll-site/process.html" />
+<meta property="og:site_name" content="Apache Attic" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Process" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life.","headline":"Process","url":"https://attic.apache.org/attic-jekyll-site/process.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/attic-jekyll-site/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://attic.apache.org/attic-jekyll-site/feed.xml" title="Apache Attic" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/attic-jekyll-site/">Apache Attic</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/attic-jekyll-site/">The Apache Attic</a><a class="page-link" href="/attic-jekyll-site/process.html">Process</a><a class="page-link" href="/attic-jekyll-site/resolution.html">Resolution</a><a class="page-link" href="/attic-jekyll-site/tracking.html">Process Tracking</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Process</h1>
+  </header>
+
+  <div class="post-content">
+    <table width = "100%" border = "0">
+<tr  valign = "top">
+<td width = "80%">
+    <p>At some point a PMC may want to join the Attic. The following defines a process
+to move that PMC into the Attic and gently close it down.</p>
+
+<ol>
+  <li>A PMC decides to move to the Attic.
+    <ul>
+      <li>Conduct a discussion on the public developer list whether to dissolve the PMC. Do not conduct
+ it on the private PMC list.</li>
+      <li>Consider an appeal to the user list for interested users to provide their interest in helping out more.</li>
+      <li>Consider whether any contributors might be candidates for promotion to committers or PMC members.</li>
+      <li>Conduct a PMC vote on the public dev list.</li>
+      <li>If the PMC votes to dissolve the PMC and move to the Attic, inform the board of the successful vote on
+  board@ mailing list (linking or forwarding the ‘successful’ vote) and add a resolution to dissolve the
+  PMC to the next board meeting agenda.</li>
+      <li>If the PMC can’t get enough people to vote to dissolve the PMC (and there are not three -1 votes), then
+ that is grounds for moving to the Attic. They should inform the board as above, noting that the vote
+ failed to get enough votes.</li>
+    </ul>
+  </li>
+  <li>If the board approves the resolution, open an <a href="https://issues.apache.org/jira/browse/ATTIC">Attic JIRA</a>
+item - ‘Move ${project} to the Attic’. The Attic PMC will step in and create a detailed issue
+description using <a href="https://svn.apache.org/repos/asf/attic/site/retire.py">retire.py</a>,
+with other generated parts to move the project to the Attic.
+Generated issue content typically contains following steps (see <a href="#how-to-general-pointers">“How to”</a> below for a description
+of each step):
+    <ul>
+      <li><a href="#confirm">#</a> Confirm Board Resolution</li>
+      <li><a href="#confirm">#</a> Inform users of the move to the Attic</li>
+      <li><a href="#confirm">#</a> Create project page on Attic site: https://attic.apache.org/projects/$project.html</li>
+      <li><a href="#confirm">#</a> Update the project DOAP files (if any) or copy to <a href="https://svn.apache.org/repos/asf/comdev/projects.apache.org/trunk/data/projects-override/">projects-override</a></li>
+      <li><a href="#confirm">#</a> Get infra lock down project’s resources</li>
+      <li><a href="#confirm">#</a> Announce on <a href="https://lists.apache.org/list?announce@apache.org:lte=1M:%22is%20now%20retired%22">announce at apache.org</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p>The Attic PMC will then execute the steps: getting help from terminating project is welcome, particularly
+on informing users step or any other useful action at project’s level like modifying DOAP.</p>
+
+<h3 id="how-to-general-pointers">How to: General pointers</h3>
+
+<p>The following are useful Git/svn/https locations:</p>
+
+<ul>
+  <li>site (https://attic.apache.org), with its source (https://github.com/apache/attic), built to asf-site</li>
+  <li>jira (https://issues.apache.org/jira/browse/ATTIC)</li>
+  <li>legacy svn site <a href="https://svn.apache.org/repos/asf/attic/site">svn.apache.org/repos/asf/attic/site</a>
+(<a href="https://github.com/apache/attic-site">github.com/apache/attic-site</a> mirror): cwiki_retired is last content used for now</li>
+  <li>permissions on svn <a href="https://github.com/apache/infrastructure-p6/blob/production/modules/subversion_server/files/authorization/asf-authorization-template#L231">/repos/asf</a>
+and <a href="https://github.com/apache/infrastructure-p6/blob/production/modules/subversion_server/files/authorization/pit-authorization-template">/repos/infra</a></li>
+  <li>websites <a href="https://github.com/apache/infrastructure-p6/blob/production/modules/svnwcsub/files/svnwcsub.conf">svnpubsub</a> and
+<a href="https://infra-reports.apache.org/#sitesource">infra-reports#sitesource</a></li>
+</ul>
+
+<h4 id="how-to-1-confirm-board-resolution">How to: 1. Confirm Board Resolution</h4>
+
+<p>Check previous Board minutes to confirm the “terminate” resolution passed. The minutes are available from the following sources:</p>
+
+<ul>
+  <li>The private <a href="https://lists.apache.org/list.html?committers@apache.org:lte=2M:ASF%20Board%20Meeting">committers@a.o mailing list</a> (requires login)</li>
+  <li>Previously published <a href="https://www.apache.org/foundation/board/calendar.html">Board meeting minutes</a></li>
+  <li>Whimsy has a public list of <a href="https://whimsy.apache.org/board/minutes/">Board Minutes by topic</a></li>
+</ul>
+
+<p>However note that the most recent meeting minutes are not published until the following meeting at the earliest.</p>
+
+<p>Check that Secretary removed the PMC from <a href="https://svn.apache.org/repos/private/committers/board/committee-info.txt">https://svn.apache.org/repos/private/committers/board/committee-info.txt</a>
+(see also <a href="https://lists.apache.org/list.html?committers-cvs@apache.org">commits history</a>).</p>
+
+<p>This automatically removes VP entry on <a href="https://www.apache.org/foundation/leadership">https://www.apache.org/foundation/leadership</a>
+(<a href="https://github.com/apache/www-site/blob/main/content/foundation/leadership.ezmd">src</a>) and project from
+<a href="https://www.apache.org/#projects-list">https://www.apache.org/#projects-list</a> navigation
+(<a href="https://github.com/apache/www-site/blob/main/content/index.ezmd#L304">src</a>): see <a href="https://github.com/apache/www-site">www-site</a>
+and its rendered HTML in <a href="https://github.com/apache/www-site/tree/asf-site">asf-site</a> branch.</p>
+
+<h4 id="how-to-2-inform-users-of-the-move-to-the-attic">How to: 2. Inform users of the move to the Attic</h4>
+
+<p>Let the users know that the PMC is moving into the Attic. Use the following template:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A heads up for the ${project} user community that the ${project} PMC has 
+been 'moved to the Attic'. This means that the ${project} developers (more 
+formally its Project Management Committee) have voted to retire ${project} 
+and move the responsibility for its oversight over to the Attic project.
+
+Loosely speaking this means that the projects resources will be moved to a 
+read-only state.
+
+You can read more about the Apache Attic and the process of moving to the 
+Attic at https://attic.apache.org.
+
+You can follow this process in JIRA: 
+ 
+  https://issues.apache.org/jira/browse/ATTIC-${#}
+
+Thanks,
+
+${Name} on behalf of ${project} + the Attic.
+</code></pre></div></div>
+
+<p>Remember to <a href="https://www.apache.org/foundation/mailinglists.html">subscribe</a> to the user
+list: use <a href="https://whimsy.apache.org/committers/subscribe">Whimsy Mailing List Self-subscription</a>
+to avoid moderation (if the project hasn’t been removed yet).</p>
+
+<p>Also bear in mind that the user mailing list may already know and you can skip this stage,
+or you can get help from project having asked to move to the Attic. Make sure you read that 
+thread if it does exist.</p>
+
+<h4 id="how-to-3-create-project-page-on-attic-site-httpsatticapacheorgprojectsprojecthtml">How to: 3. Create project page on Attic site: https://attic.apache.org/projects/${project}.html</h4>
+
+<p>The Attic website is built using Anakia. <a href="https://velocity.apache.org/anakia/">Anakia</a> is
+an old site technology built on top of Apache Velocity. You can get the source for the site
+from Subversion:</p>
+
+<p><code class="language-plaintext highlighter-rouge">svn co https://svn.apache.org/repos/asf/attic/site</code></p>
+
+<p>You can generate the required changes using the Python3
+<a href="https://svn.apache.org/repos/asf/attic/site/retire.py"><code class="language-plaintext highlighter-rouge">retire.py</code></a> script as follows:</p>
+
+<p><code class="language-plaintext highlighter-rouge">./retire.py id1 \[id2...\]</code></p>
+
+<p>This should generate the following files for each ID, as well as updating <code class="language-plaintext highlighter-rouge">xdocs/stylesheets/project.xml</code>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ID.jira.tmp</code></li>
+  <li><code class="language-plaintext highlighter-rouge">xdocs/flagged/ID</code> (this is a directory, used to add the Attic banner)</li>
+  <li><code class="language-plaintext highlighter-rouge">xdocs/projects/ID.xml</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cwiki_retired/WIKI_ID.txt</code> (this adds the CWIKI banner for projects)</li>
+</ul>
+
+<p>The code allows for wiki aliases, as described in the cwiki_retired/AAREADME.txt file.</p>
+
+<p>Review the changes in <code class="language-plaintext highlighter-rouge">xdocs/</code>, then commit to svn.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">ID.jira.tmp</code> file is text that can be copy-pasted into a JIRA description.
+It should be deleted after use, and not committed to SVN.</p>
+
+<p>The <a href="https://ci2.apache.org/#/builders/16">buildbot job</a> will build the site
+and commit the result which will be published soon after.</p>
+
+<h4 id="how-to-4-update-the-project-doap-file-if-any-httpsprojectsapacheorgprojecthtmlproject">How to: 4. Update the project DOAP file (if any): https://projects.apache.org/project.html?${project}</h4>
+
+<p>The files referenced are in [https://svn.apache.org/repos/asf/comdev/projects.apache.org/trunk]
+(https://svn.apache.org/repos/asf/comdev/projects.apache.org/trunk), which every Apache committer can update.</p>
+
+<p>Identify whether the project has a DOAP file (see the <comdev repo="">/projects.apache.org/data/projects.xml file)
+and update the rdf file with PMC to the Attic and add a category of _retired_:</comdev></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pmc change:    &lt;asfext:pmc rdf:resource="http://attic.apache.org" /&gt;
+new category:  &lt;category rdf:resource="http://projects.apache.org/category/retired" /&gt;
+</code></pre></div></div>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">script/project2attic.py</code> to prepare the update that you’ll just need to
+review and commit</p>
+
+<h4 id="how-to-5-get-infra-lock-down-projects-resources">How to: 5. Get infra lock down project’s resources</h4>
+
+<p>Open an <a href="https://issues.apache.org/jira/browse/INFRA">Infrastructure JIRA</a> issue identifying
+the resources that need turning off/making read only.</p>
+
+<p>The content of the issue can be generated using [<code class="language-plaintext highlighter-rouge">infrajiratext.py</code>]
+(https://svn.apache.org/repos/asf/attic/site/infrajiratext.py).</p>
+
+<p>Typically, it contains steps like following, that need to be tweaked based on assets of the retired project:</p>
+
+<ul>
+  <li>Make source control Git|Svn read-only</li>
+  <li>Remove files from <a href="https://dist.apache.org/repos/dist/">dist.apache.org/repos/dist/[release|dev]</a></li>
+  <li>Closing down of dev@, commits@ and private@ etc. <a href="https://lists.apache.org/">mailing lists</a></li>
+  <li>Close down the user mailing list (unless still active - in which case propose a moderator to Infra)</li>
+  <li>Make JIRA|Bugzilla read-only</li>
+  <li>Make the wiki (if any) read-only</li>
+  <li>Delete LDAP group(s)</li>
+  <li>Turn off automated builds</li>
+</ul>
+
+<h4 id="how-to-6-announce-on-announceapacheorg">How to: 6. Announce on announce@apache.org</h4>
+
+<p>Announce that the project <a href="https://lists.apache.org/list?announce@apache.org:lte=1M:%22is%20now%20retired%22">is now retired</a>.
+Consider the following template.</p>
+
+<p>Sometimes, the user mailing list will not be shut down. If that is the case,
+it should be mentioned in the announce. e.g. add “The user mailing list remains open.”
+after “change in url.” below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Announcing that the Apache ${project} committers have voted to retire
+the project due to inactivity. ${project} was {boilerplate}.
+
+Retiring a project is not as simple as turning everything off, as
+existing users need to both know that the project is retiring and
+retain access to the necessary information for their own development
+efforts.
+
+You can read more about ${project}'s retirement at:
+
+   https://attic.apache.org/projects/${project}.html
+
+The project's resources will continue to be available in a read-only state -
+website, mailing lists, wikis, git, downloads and bug tracker with no 
+change in url.
+
+Providing process and solutions to make it clear when an Apache
+project has reached its end of life is the role of the Apache Attic,
+and you can read more about that at:
+
+   https://attic.apache.org/
+
+Thanks,
+
+${NAME}
+on behalf of the Apache Attic and the now retired Apache ${project} project
+</code></pre></div></div>
+
+<p>It’s important to include the boilerplate from the project’s site so people know what we’re talking about.</p>
+
+</td>
+<td width = "20%"><b>Projects in the Attic</b>
+    <ul>
+      <li><a href="/attic-jekyll-site/projects/abdera.html">Abdera</a></li>
+      <li><a href="/attic-jekyll-site/projects/ace.html">Ace</a></li>
+      <li><a href="/attic-jekyll-site/projects/any23.html">Any23</a></li>
+      <li><a href="/attic-jekyll-site/projects/apex.html">Apex</a></li>
+      <li><a href="/attic-jekyll-site/projects/archiva.html">Archiva</a></li>
+      <li><a href="/attic-jekyll-site/projects/aurora.html">Aurora</a></li>
+      <li><a href="/attic-jekyll-site/projects/avalon.html">Avalon</a></li>
+      <li><a href="/attic-jekyll-site/projects/axis-sandesha-c.html">Axis Sandesha2/C</a></li>
+      <li><a href="/attic-jekyll-site/projects/axis-savan-c.html">Axis Savan/C</a></li>
+      <li><a href="/attic-jekyll-site/projects/axis-savan-java.html">Axis Savan/Java</a></li>
+      <li><a href="/attic-jekyll-site/projects/axkit.html">Axkit</a></li>
+      <li><a href="/attic-jekyll-site/projects/bahir.html">Bahir</a></li>
+      <li><a href="/attic-jekyll-site/projects/beehive.html">Beehive</a></li>
+      <li><a href="/attic-jekyll-site/projects/bloodhound.html">Bloodhound</a></li>
+      <li><a href="/attic-jekyll-site/projects/buildr.html">Buildr</a></li>
+      <li><a href="/attic-jekyll-site/projects/chemistry.html">Chemistry</a></li>
+      <li><a href="/attic-jekyll-site/projects/chukwa.html">Chukwa</a></li>
+      <li><a href="/attic-jekyll-site/projects/clerezza.html">Clerezza</a></li>
+      <li><a href="/attic-jekyll-site/projects/click.html">Click</a></li>
+      <li><a href="/attic-jekyll-site/projects/climate.html">Open Climate Workbench</a></li>
+      <li><a href="/attic-jekyll-site/projects/cocoon.html">Cocoon</a></li>
+      <li><a href="/attic-jekyll-site/projects/continuum.html">Continuum</a></li>
+      <li><a href="/attic-jekyll-site/projects/crimson.html">Crimson</a></li>
+      <li><a href="/attic-jekyll-site/projects/crunch.html">Crunch</a></li>
+      <li><a href="/attic-jekyll-site/projects/deltacloud.html">Deltacloud</a></li>
+      <li><a href="/attic-jekyll-site/projects/devicemap.html">DeviceMap</a></li>
+      <li><a href="/attic-jekyll-site/projects/directmemory.html">DirectMemory</a></li>
+      <li><a href="/attic-jekyll-site/projects/drat.html">DRAT</a></li>
+      <li><a href="/attic-jekyll-site/projects/eagle.html">Eagle</a></li>
+      <li><a href="/attic-jekyll-site/projects/esme.html">ESME</a></li>
+      <li><a href="/attic-jekyll-site/projects/etch.html">Etch</a></li>
+      <li><a href="/attic-jekyll-site/projects/excalibur.html">Excalibur</a></li>
+      <li><a href="/attic-jekyll-site/projects/falcon.html">Falcon</a></li>
+      <li><a href="/attic-jekyll-site/projects/forrest.html">Forrest</a></li>
+      <li><a href="/attic-jekyll-site/projects/giraph.html">Giraph</a></li>
+      <li><a href="/attic-jekyll-site/projects/gora.html">Gora</a></li>
+      <li><a href="/attic-jekyll-site/projects/hama.html">Hama</a></li>
+      <li><a href="/attic-jekyll-site/projects/harmony.html">Harmony</a></li>
+      <li><a href="/attic-jekyll-site/projects/hawq.html">HAWQ</a></li>
+      <li><a href="/attic-jekyll-site/projects/hivemind.html">HiveMind</a></li>
+      <li><a href="/attic-jekyll-site/projects/ibatis.html">iBATIS</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-cactus.html">Jakarta Cactus</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-ecs.html">Jakarta ECS</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-oro.html">Jakarta ORO</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-regexp.html">Jakarta Regexp</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-slide.html">Jakarta Slide</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta-taglibs.html">Jakarta Taglibs</a></li>
+      <li><a href="/attic-jekyll-site/projects/jakarta.html">Jakarta</a></li>
+      <li><a href="/attic-jekyll-site/projects/joshua.html">Joshua</a></li>
+      <li><a href="/attic-jekyll-site/projects/juddi.html">jUDDI</a></li>
+      <li><a href="/attic-jekyll-site/projects/labs.html">Labs</a></li>
+      <li><a href="/attic-jekyll-site/projects/lens.html">Lens</a></li>
+      <li><a href="/attic-jekyll-site/projects/lenya.html">Lenya</a></li>
+      <li><a href="/attic-jekyll-site/projects/lucy.html">Lucy</a></li>
+      <li><a href="/attic-jekyll-site/projects/marmotta.html">Marmotta</a></li>
+      <li><a href="/attic-jekyll-site/projects/metamodel.html">MetaModel</a></li>
+      <li><a href="/attic-jekyll-site/projects/metron.html">Metron</a></li>
+      <li><a href="/attic-jekyll-site/projects/mnemonic.html">Mnemonic</a></li>
+      <li><a href="/attic-jekyll-site/projects/mrunit.html">MRUnit</a></li>
+      <li><a href="/attic-jekyll-site/projects/muse.html">WS Muse</a></li>
+      <li><a href="/attic-jekyll-site/projects/mxnet.html">MXNet</a></li>
+      <li><a href="/attic-jekyll-site/projects/ode.html">ODE</a></li>
+      <li><a href="/attic-jekyll-site/projects/ojb.html">ObJectRelationalBridge (OJB)</a></li>
+      <li><a href="/attic-jekyll-site/projects/oltu.html">Oltu</a></li>
+      <li><a href="/attic-jekyll-site/projects/onami.html">Onami</a></li>
+      <li><a href="/attic-jekyll-site/projects/oodt.html">OODT</a></li>
+      <li><a href="/attic-jekyll-site/projects/oozie.html">Oozie</a></li>
+      <li><a href="/attic-jekyll-site/projects/pivot.html">Pivot</a></li>
+      <li><a href="/attic-jekyll-site/projects/polygene.html">Polygene</a></li>
+      <li><a href="/attic-jekyll-site/projects/predictionio.html">PredictionIO</a></li>
+      <li><a href="/attic-jekyll-site/projects/quetzalcoatl.html">Quetzalcoatl</a></li>
+      <li><a href="/attic-jekyll-site/projects/rave.html">Rave</a></li>
+      <li><a href="/attic-jekyll-site/projects/reef.html">REEF</a></li>
+      <li><a href="/attic-jekyll-site/projects/river.html">River</a></li>
+      <li><a href="/attic-jekyll-site/projects/sentry.html">Sentry</a></li>
+      <li><a href="/attic-jekyll-site/projects/shale.html">Shale</a></li>
+      <li><a href="/attic-jekyll-site/projects/shindig.html">Shindig</a></li>
+      <li><a href="/attic-jekyll-site/projects/sqoop.html">Sqoop</a></li>
+      <li><a href="/attic-jekyll-site/projects/stanbol.html">Stanbol</a></li>
+      <li><a href="/attic-jekyll-site/projects/stdcxx.html">C++ Standard Library</a></li>
+      <li><a href="/attic-jekyll-site/projects/stratos.html">Stratos</a></li>
+      <li><a href="/attic-jekyll-site/projects/streams.html">Streams</a></li>
+      <li><a href="/attic-jekyll-site/projects/submarine.html">Submarine</a></li>
+      <li><a href="/attic-jekyll-site/projects/tajo.html">Tajo</a></li>
+      <li><a href="/attic-jekyll-site/projects/tiles.html">Tiles</a></li>
+      <li><a href="/attic-jekyll-site/projects/trafodion.html">Trafodion</a></li>
+      <li><a href="/attic-jekyll-site/projects/tuscany.html">Tuscany</a></li>
+      <li><a href="/attic-jekyll-site/projects/twill.html">Twill</a></li>
+      <li><a href="/attic-jekyll-site/projects/usergrid.html">Usergrid</a></li>
+      <li><a href="/attic-jekyll-site/projects/vxquery.html">VXQuery</a></li>
+      <li><a href="/attic-jekyll-site/projects/whirr.html">Whirr</a></li>
+      <li><a href="/attic-jekyll-site/projects/wink.html">Wink</a></li>
+      <li><a href="/attic-jekyll-site/projects/wookie.html">Wookie</a></li>
+      <li><a href="/attic-jekyll-site/projects/xang.html">Xang</a></li>
+      <li><a href="/attic-jekyll-site/projects/xindice.html">Xindice</a></li>
+      <li><a href="/attic-jekyll-site/projects/xml.html">XML</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/attic-jekyll-site/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Apache Attic</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Apache Attic</li><li><a class="u-email" href="mailto:general@apache.attic.org">general@apache.attic.org</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The Apache Attic was created in November 2008 to provide process and solutions to make it clear when an Apache project has reached its end of life.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
