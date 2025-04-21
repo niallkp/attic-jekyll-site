@@ -4,18 +4,24 @@ attic_issue: ATTIC-96
 attic_date: 2010-10-01
 attic_banner: false
 project_name: Jakarta ORO
+project_domain: jakarta.apache.org/oro
 project_description: >-
-
+    Jakarta previously hosted ORO, a set of text-processing Java classes that
+    provide Perl5 compatible regular expressions, AWK-like regular expressions,
+    glob expressions, and utility classes for performing substitutions, splits,
+    filtering filenames, etc.
 board_resolution: true
-board_reports: true
+board_reports: false
 downloads: true
+archive_path: jakarta/oro
 source_repositories:
-    - type: Git
+    - type: Subversion
+      path: jakarta/oro
 mailing_lists:
     - dev
-    - commits
     - user
 issue_tracker:
-    type: JIRA
-wiki:
-    type: CWIKI
+    type: Bugzilla
+    keys:
+        - oro
+

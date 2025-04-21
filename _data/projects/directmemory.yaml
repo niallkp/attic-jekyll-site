@@ -5,12 +5,12 @@ attic_date: 2015-07-01
 attic_banner: false
 project_name: DirectMemory
 project_description: >-
-
+    DirectMemory was an off-heap cache for the Java Virtual Machine.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits

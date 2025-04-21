@@ -5,12 +5,15 @@ attic_date: 2009-03-01
 attic_banner: false
 project_name: HiveMind
 project_description: >-
-
+    HiveMind was a services and configuration microkernel. Its features are
+    also referred to as Inversion of Control (IoC) Container or Lightweight
+    Container. Closely linked to Tapestry 4, it lost activity when Tapestry 5
+    moved to a new IoC container.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits
@@ -19,3 +22,13 @@ issue_tracker:
     type: JIRA
 wiki:
     type: CWIKI
+    keys:
+        - HIVEMIND/Home
+        - HIVEMIND2/Index
+related_projects:
+    - name: Tapestry IoC
+      url: https://tapestry.apache.org/ioc.html
+      description: Discussion on the mailing list indicated that this was the natural successor to HiveMind.
+    - name: Gaderian 
+      url: https://ops4j1.jira.com/wiki/spaces/gaderian/
+      description: is one fork that has been created

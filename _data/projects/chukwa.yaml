@@ -4,7 +4,8 @@ attic_issue: ATTIC-183
 attic_date: 2021-04-01
 attic_banner: true
 project_description: >-
-
+    Apache Chukwa's mission was Open source data collection system for
+    monitoring large distributed systems.
 board_resolution: true
 board_reports: true
 downloads: true

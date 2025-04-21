@@ -4,17 +4,19 @@ attic_issue: ATTIC-124
 attic_date: 2013-06-01
 attic_banner: true
 project_name: ESME
+project_longname: ESME (Enterprise Social Messaging Environment)
 project_description: >-
-
+    ESME was a secure and highly scalable microsharing and micromessaging
+    platform that allows people to discover and meet one another and get
+    controlled access to other sources of information.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits
-    - user
 issue_tracker:
     type: JIRA
 wiki:

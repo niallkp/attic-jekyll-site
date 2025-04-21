@@ -5,7 +5,8 @@ attic_date: 2021-04-01
 attic_banner: true
 project_name: DRAT
 project_description: >-
-
+    Apache DRAT's mission was large scale code license analysis,
+    auditing and reporting.
 board_resolution: true
 board_reports: true
 downloads: true
@@ -14,8 +15,5 @@ source_repositories:
 mailing_lists:
     - dev
     - commits
-    - user
 issue_tracker:
     type: JIRA
-wiki:
-    type: CWIKI

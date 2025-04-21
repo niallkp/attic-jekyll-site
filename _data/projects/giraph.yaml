@@ -4,7 +4,7 @@ attic_issue: ATTIC-217
 attic_date: 2024-02-01
 attic_banner: true
 project_description: >-
-
+    Giraph was an iterative graph processing system built for high scalability.
 board_resolution: true
 board_reports: true
 downloads: true

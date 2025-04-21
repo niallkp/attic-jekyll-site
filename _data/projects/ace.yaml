@@ -9,7 +9,7 @@ board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits

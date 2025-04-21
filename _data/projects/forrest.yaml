@@ -4,17 +4,19 @@ attic_issue: ATTIC-180
 attic_date: 2021-04-01
 attic_banner: true
 project_description: >-
-
+    pache Forrest was software for generation of aggregated multi-channel
+    documentation maintaining a separation of content and presentation.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
-    - commits
+    - site-svn
+    - svn
     - user
 issue_tracker:
     type: JIRA
-wiki:
-    type: CWIKI
+    keys:
+        - FOR

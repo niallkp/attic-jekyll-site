@@ -5,7 +5,9 @@ attic_date: 2022-07-01
 attic_banner: true
 project_name: Clerezza
 project_description: >-
-
+    Apache Clerezza was a service platform which provided a set of
+    functionality for management of semantically linked data accessible
+    through RESTful Web Services and in a secured way.
 board_resolution: true
 board_reports: true
 downloads: true
@@ -14,7 +16,6 @@ source_repositories:
 mailing_lists:
     - dev
     - commits
-    - user
 issue_tracker:
     type: JIRA
 wiki:

@@ -4,17 +4,20 @@ attic_issue: ATTIC-112
 attic_date: 2004-01-01
 attic_banner: false
 project_description: >-
-
+    Apache Avalon was closed down in 2004, long before the creation
+    of the Apache Attic. It's mentioned here for completeness.
+additional_text: >-
+    For more information, including its successors, archives and description;
+    see the website at http://avalon.apache.org.
 board_resolution: false
 board_reports: false
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
-    - commits
-    - user
-issue_tracker:
-    type: JIRA
+    - apps-dev
+    - cvs
+    - phoenix-dev
 wiki:
     type: CWIKI
