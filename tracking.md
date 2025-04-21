@@ -6,7 +6,7 @@ title: Process Tracking
 {% capture project_list %}
 {%- for proj_hash in site.data.projects -%}
   {%- unless forloop.first %},{% endunless -%}
-  {{proj_hash[1].retirement_date | proj_hash[1].completion_date | append: ":" | append: proj_hash[0] }}
+  {{proj_hash[1].retirement_date | append: proj_hash[1].completion_date | append: ":" | append: proj_hash[0] }}
 {%- endfor -%}
 {% endcapture %}
 {% assign project_array = project_list | split: "," | sort | reverse %}
