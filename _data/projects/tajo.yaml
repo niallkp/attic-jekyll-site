@@ -5,7 +5,7 @@ attic_date: 2021-04-01
 attic_banner: true
 project_name: Tajo
 project_description: >-
-
+    Tajo mission was Big data warehouse system on Apache Hadoop.
 board_resolution: true
 board_reports: true
 downloads: true
@@ -14,6 +14,7 @@ source_repositories:
 mailing_lists:
     - dev
     - commits
+    - issues
     - user
 issue_tracker:
     type: JIRA

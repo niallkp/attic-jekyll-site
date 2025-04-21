@@ -5,7 +5,9 @@ attic_date: 2022-08-01
 attic_banner: true
 project_name: REEF
 project_description: >-
-
+    REEF (Retainable Evaluator Execution Frameworks) mission was to provide
+    a library for developing portable applications for cluster resource
+    managers such as Apache Hadoop YARN or Apache Mesos
 board_resolution: true
 board_reports: true
 downloads: true

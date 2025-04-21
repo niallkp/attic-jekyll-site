@@ -4,7 +4,7 @@ attic_issue: ATTIC-194
 attic_date: 2021-04-01
 attic_banner: true
 project_description: >-
-
+    Marmotta was an Open Platform for Linked Data.
 board_resolution: true
 board_reports: true
 downloads: true

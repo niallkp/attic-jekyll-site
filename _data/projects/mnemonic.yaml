@@ -4,7 +4,7 @@ attic_issue: ATTIC-233
 attic_date:
 attic_banner: true
 project_description: >-
-    Apache Mnemonic was a transparent nonvolatile hybrid memory oriented
+    Mnemonic was a transparent nonvolatile hybrid memory oriented
     library for Big data, High-performance computing, and Analytics.
 board_resolution: true
 board_reports: true

@@ -4,7 +4,8 @@ attic_issue: ATTIC-197
 attic_date: 2021-05-01
 attic_banner: true
 project_description: >-
-
+    Trafodion was a webscale SQL-on-Hadoop solution enabling transactional
+    or operational workloads on Apache Hadoop.
 board_resolution: true
 board_reports: true
 downloads: true
@@ -12,7 +13,9 @@ source_repositories:
     - type: Git
 mailing_lists:
     - dev
+    - codereview
     - commits
+    - issues
     - user
 issue_tracker:
     type: JIRA

@@ -4,15 +4,17 @@ attic_issue: ATTIC-173
 attic_date: 2019-11-01
 attic_banner: true
 project_description: >-
-
+    Tiles is a templating framework built to simplify the development
+    of web application user interfaces.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits
+    - issues
     - user
 issue_tracker:
     type: JIRA

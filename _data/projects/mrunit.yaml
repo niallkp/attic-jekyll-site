@@ -5,11 +5,12 @@ attic_date: 2016-05-01
 attic_banner: false
 project_name: MRUnit
 project_description: >-
-
+    MRUnit was a Java library that helped developers unit test Apache Hadoop map reduce jobs.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
+    - type: Subversion
     - type: Git
 mailing_lists:
     - dev

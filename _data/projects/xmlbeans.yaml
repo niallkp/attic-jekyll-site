@@ -5,12 +5,12 @@ attic_date: 2013-07-01
 attic_banner: false
 project_name: XMLBeans
 project_description: >-
-
+    XMLBeans is a technology for accessing XML by binding it to Java types.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits

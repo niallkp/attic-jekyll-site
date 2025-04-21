@@ -5,7 +5,7 @@ attic_date: 2025-04-01
 attic_banner: true
 project_name: Oozie
 project_description: >-
-
+    Oozie was a workflow scheduler system to manage Apache Hadoop jobs..
 board_resolution: true
 board_reports: true
 downloads: true

@@ -4,12 +4,13 @@ attic_issue: ATTIC-151
 attic_date: 2016-04-01
 attic_banner: false
 project_description: >-
-
+    Wookie was a Java server application that allowed you to upload and deploy
+    W3C/OpenSocial/Google Wave widgets to your applications.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits

@@ -4,12 +4,12 @@ attic_issue: ATTIC-228
 attic_date: 2025-04-01
 attic_banner: true
 project_description: >-
-
+    Pivot's mission was Rich Internet applications in Java.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits

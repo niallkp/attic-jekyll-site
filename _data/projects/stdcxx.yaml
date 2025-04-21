@@ -5,12 +5,15 @@ attic_date: 2013-07-01
 attic_banner: false
 project_name: C++ Standard Library
 project_description: >-
-
+    The Apache C++ Standard Library project was a collection of algorithms,
+    containers, iterators, and other fundamental components of every piece of
+    software, implemented as C++ classes, templates, and functions essential
+    for writing C++ programs.
 board_resolution: true
 board_reports: true
 downloads: true
 source_repositories:
-    - type: Git
+    - type: Subversion
 mailing_lists:
     - dev
     - commits
