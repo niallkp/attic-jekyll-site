@@ -11,9 +11,9 @@ project_description: >-
     [Project description here]
 additional_text: >-
     [Put some text here]
-board_resolution: true           ### [REQUIRED] Valid values: true/false
-board_reports: true              ### [REQUIRED] Valid values: true/false
-downloads: true                  ### [REQUIRED] Valid values: true/false
+board_resolution: true           ### [REQUIRED] Valid values: true/false (link to board minutes from retirement date?)
+board_reports: true              ### [REQUIRED] Valid values: true/false (include Board Reports section?)
+downloads: true                  ### [REQUIRED] Valid values: true/false (include Downloads section?)
 archive_path:                    ### [OPTIONAL] Defaults to this file name
 source_repositories:
     - type: Git                  ### [REQUIRED] Valid Values: Subversion, Git (may have both)
