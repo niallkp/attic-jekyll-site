@@ -24,7 +24,11 @@ layout: attic-layout
   </b>
   and the move to the Attic
   {%- if page.attic_date %}
-    was completed in <b>{{ page.attic_date | date: "%B %Y" }}</b>.
+    {%- if page.attic_issue %}
+      was completed in <a href="https://issues.apache.org/jira/browse/{{ page.attic_issue }}">{{ page.attic_date | date: "%B %Y" }}</a>.
+    {%- else %}
+      was completed in <b>{{ page.attic_date | date: "%B %Y" }}</b>.
+    {%- endif -%}
   {%- else -%}
     &nbsp;is <b><i>In Progress</i></b> (see <a href="{{ site.baseurl }}/templates/{{page.project_id}}.html">templates for {{project_name}}</a>).
   {%- endif -%}
