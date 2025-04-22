@@ -21,7 +21,87 @@ Use the markup below to create an Infra JIRA for the project's move to the Attic
 </p>
 
 <pre>
-   TBA
+{{ project_name }} project has retired.
+The following resources were detected for archive/removal please:
+
+Remove the distribution SVN developer directory:
+- https://dist.apache.org/repos/dist/dev/{{ page.project_id }}
+Remove the distribution SVN release directory contents:
+- https://dist.apache.org/repos/dist/release/{{ page.project_id }}
+and set up redirection to https://attic.apache.org/projects/{{ page.project_id }}.html
+
+{% if page.mailing_lists -%}
+Mailing lists https://lists.apache.org/list.html?{{ page.project_id }}.apache.org :
+{%- for mail_list in page.mailing_lists %}
+- {{ mail_list }}@{{ page.project_id }}.apache.org
+{%- endfor %}
+{%- endif %}
+
+{% case page.issue_tracker.type -%}
+{%- when "JIRA" -%}
+Make the following JIRA project(s) read-only and flag as retired:
+{%- for jira_key in page.issue_tracker.keys %}
+https://issues.apache.org/jira/projects/{{ jira_key }}/
+{%- else %}
+{%- assign jira_key = page.project_id | upcase %}
+https://issues.apache.org/jira/projects/{{ jira_key }}/
+{%- endfor %}
+{%- when "Bugzilla" -%}
+Make the following Bugzilla project(s) read-only and flag as retired:
+{%- for bz_key in page.issue_tracker.keys %}
+{%- unless forloop.first %} | {% endunless %}
+https://bz.apache.org/bugzilla/buglist.cgi?product={{ bz_key }}
+{%- else %}
+{%- assign bz_key = page.project_id | downcase %}
+https://bz.apache.org/bugzilla/buglist.cgi?product={{ bz_key }}
+{%- endfor %}
+{% endcase %}
+
+{% if page.source_repositories -%}
+Make the following source repositories read-only:
+{%- for source_repo in page.source_repositories %}
+{{ source_repo.type}}
+{%- case source_repo.type %}
+{%- when "Subversion" %}
+{%- for path in source_repo.path %}
+{%- assign svn_path = path | prepend: "svn.apache.org/repos/asf/" %}
+https://{{ svn_path }}
+{%- else %}
+{%- assign svn_path = source_repo.path | default: page.project_id | prepend: "svn.apache.org/repos/asf/" %}
+https://{{ svn_path }}
+{%- endfor %}
+{%- when "Git" %}
+{%- for path in source_repo.path %}
+{%- assign git_path = path | prepend: "gitbox.apache.org/repos/asf/" %}
+https://{{ git_path }}.git
+{%- else %}
+{%- assign git_path = source_repo.path | default: page.project_id | prepend: "gitbox.apache.org/repos/asf/" %}
+https://{{ git_path }}.git
+{%- endfor %}
+{%- else %}
+??? {{ source_repo.type}} ???
+{%- endcase %}
+{%- endfor %}
+Please do NOT rename the repos.
+{%- endif %}
+
+{% if page.wiki.type -%}
+{%- case page.wiki.type -%}
+{%- when "CWIKI" -%}
+Make CWIKI readonly:
+{%- for wiki_key in page.wiki.keys %}
+https://cwiki.apache.org/confluence/display/{{ wiki_key }}
+{%- else %}
+{%- assign wiki_key = page.project_id %}
+https://cwiki.apache.org/confluence/display/{{ wiki_key }}/
+{%- endfor %}
+{%- else %}
+??? {{ page.wiki.type}} ???
+{%- endcase %}
+{%- endif %}
+
+Remove the LDAP project group: dn: cn={{ page.project_id }},ou=project,ou=groups,dc=apache,dc=org
+Turn off any automated builds
 </pre>
 
 <h4>Attic JIRA Template</h4>
