@@ -12,6 +12,9 @@ downloads: true
 source_repositories:
     - type: Subversion
     - type: Git
+      path:
+        - gora
+        - gora-site
 mailing_lists:
     - dev
     - commits
