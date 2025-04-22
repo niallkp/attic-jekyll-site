@@ -76,11 +76,27 @@ layout: attic-layout
     <td>Source Code ({{ source_repo.type}})</td>
     {%- case source_repo.type %}
     {%- when "Subversion" %}
-      {%- assign svn_path = source_repo.path | default: page.project_id | prepend: "svn.apache.org/repos/asf/" %}
-      <td><a href="https://{{ svn_path }}/">{{ svn_path }}</a></td>
+      <td>
+      {%- for path in source_repo.path %}
+        {%- assign svn_path = path | prepend: "svn.apache.org/repos/asf/" %}
+        <a href="https://{{ svn_path }}/">{{ svn_path }}</a>
+        <br>
+      {%- else %}
+        {%- assign svn_path = source_repo.path | default: page.project_id | prepend: "svn.apache.org/repos/asf/" %}
+        <a href="https://{{ svn_path }}/">{{ svn_path }}</a>
+      {%- endfor %}
+      </td>
     {%- when "Git" %}
-      {%- assign git_path = source_repo.path | default: page.project_id | prepend: "gitbox.apache.org/repos/asf#" %}
-      <td><a href="https://{{ git_path }}">{{ git_path }}</a></td>
+      <td>
+      {%- for path in source_repo.path %}
+        {%- assign git_path = path | prepend: "gitbox.apache.org/repos/asf#" %}
+        <a href="https://{{ git_path }}">{{ git_path }}</a>
+        <br>
+      {%- else %}
+        {%- assign git_path = source_repo.path | default: page.project_id | prepend: "gitbox.apache.org/repos/asf#" %}
+        <a href="https://{{ git_path }}">{{ git_path }}</a>
+      {%- endfor %}
+      </td>
     {%- else %}
       <td>??? {{ source_repo.type}} ???</td>
     {%- endcase %}
