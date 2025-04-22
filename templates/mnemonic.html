@@ -60,7 +60,32 @@ Use the markup below to create an Infra JIRA for the project's move to the Attic
 </p>
 
 <pre>
-   TBA
+Mnemonic project has retired.
+The following resources were detected for archive/removal please:
+
+Remove the distribution SVN developer directory:
+- https://dist.apache.org/repos/dist/dev/mnemonic
+Remove the distribution SVN release directory contents:
+- https://dist.apache.org/repos/dist/release/mnemonic
+and set up redirection to https://attic.apache.org/projects/mnemonic.html
+
+Mailing lists https://lists.apache.org/list.html?mnemonic.apache.org :
+- dev@mnemonic.apache.org
+- commits@mnemonic.apache.org
+
+Make the following JIRA project(s) read-only and flag as retired:
+https://issues.apache.org/jira/projects/MNEMONIC/
+
+Make the following source repositories read-only:
+Git
+https://gitbox.apache.org/repos/asf/mnemonic.git
+Please do NOT rename the repos.
+
+Make CWIKI readonly:
+https://cwiki.apache.org/confluence/display/mnemonic/
+
+Remove the LDAP project group: dn: cn=mnemonic,ou=project,ou=groups,dc=apache,dc=org
+Turn off any automated builds
 </pre>
 
 <h4>Attic JIRA Template</h4>
