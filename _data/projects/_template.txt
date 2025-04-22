@@ -1,8 +1,8 @@
 ---
-retirement_date: yyyy-mm-dd      ### [REQUIRED] Date the project retired                              
+retirement_date: yyyy-mm-dd      ### [REQUIRED] Date the project retired (date of board meeting)
 attic_issue: ATTIC-XXX           ### [OPTIONAL] The JIRA-ID managing the projects retirement
 attic_date: yyyy-mm-dd           ### [OPTIONAL] Date the move to the Attic was completed
-attic_banner: true               ### [OPTIONAL] Valid values: true/false
+attic_banner: true               ### [OPTIONAL] Valid values: true/false (should banner be generated, normally true)
 revived_date: yyyy-mm-dd         ### [OPTIONAL] Date the project was revived - moved out of the Attic
 project_name: [Another Name]     ### [OPTIONAL] defaults to this file name
 project_longname:                ### [OPTIONAL] defaults to this file name
@@ -16,7 +16,7 @@ board_reports: true              ### [REQUIRED] Valid values: true/false
 downloads: true                  ### [REQUIRED] Valid values: true/false
 archive_path:                    ### [OPTIONAL] Defaults to this file name
 source_repositories:
-    - type: Git                  ### [REQUIRED] Valid Values: Subversion, Git
+    - type: Git                  ### [REQUIRED] Valid Values: Subversion, Git (may have both)
       path: [some/path]          ### [OPTIONAL] Defaults to this file name
 mailing_lists:
     - dev
