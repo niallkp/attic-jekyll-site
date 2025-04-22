@@ -35,6 +35,9 @@ Mailing lists https://lists.apache.org/list.html?{{ page.project_id }}.apache.or
 {%- for mail_list in page.mailing_lists %}
 - {{ mail_list }}@{{ page.project_id }}.apache.org
 {%- endfor %}
+- private@{{ page.project_id }}.apache.org
+- security@{{ page.project_id }}.apache.org (if present)
+[TODO: Attic does not currently check for all private lists; this must be done manually]
 {%- endif %}
 
 {% case page.issue_tracker.type -%}
