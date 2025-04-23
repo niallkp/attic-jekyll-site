@@ -22,9 +22,9 @@ module ProjectTemplatesPlugin
     safe true
 
     def generate(site)
-      site.data['projects'].each do | projectId, project|
+      site.data['project_array'].each do | project |
         if project['attic_date'].nil?
-          site.pages << ProjectTemplatesPage.new(site, projectId, project)
+          site.pages << ProjectTemplatesPage.new(site, project['project_id'], project)
         end
       end
     end
@@ -49,7 +49,6 @@ module ProjectTemplatesPlugin
       # Define custom data.
       @data = project.clone
       @data['layout'] ='project-templates-layout'
-      @data['project_id'] = projectId
 
     end
   end

@@ -1,11 +1,10 @@
 ---
 layout: attic-layout
 ---
-{%- assign default_name     = page.project_id | capitalize %}
-{%- assign project_name     = page.project_name | default: default_name %}
-{%- assign project_longname = page.project_longname | default: project_name | prepend: "Apache "  %}
-{%- assign default_domain   = page.project_id | append: ".apache.org" %}
-{%- assign project_domain   = page.project_domain | default: default_domain %}
+
+{%- assign project_name     = page.project_name %}
+{%- assign project_longname = page.project_longname %}
+{%- assign project_domain   = page.project_domain %}
 {%- assign resolution_file  = page.retirement_date | date: "%Y/board_minutes_%Y_%m_%d.txt" %}
 {%- assign resolution_locn  = resolution_file | prepend: "https://svn.apache.org/repos/asf/infrastructure/site/trunk/content/foundation/records/minutes/" %}
 

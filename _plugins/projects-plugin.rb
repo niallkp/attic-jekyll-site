@@ -26,8 +26,8 @@ module ProjectsPlugin
     safe true
 
     def generate(site)
-      site.data['projects'].each do | projectId, project|
-        site.pages << ProjectPage.new(site, projectId, project)
+      site.data['project_array'].each do | project |
+        site.pages << ProjectPage.new(site, project['project_id'], project)
       end
     end
   end
@@ -56,7 +56,6 @@ module ProjectsPlugin
       # Define custom data.
       @data = project.clone
       @data['layout'] ='project-layout'
-      @data['project_id'] = projectId
     end
   end
 end

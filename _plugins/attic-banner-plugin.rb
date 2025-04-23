@@ -29,9 +29,9 @@ module AtticBannerPlugin
     safe true
 
     def generate(site)
-      site.data['projects'].each do | projectId, project|
+      site.data['project_array'].each do | project |
         if project['attic_banner'] == true
-          site.pages << AtticBannerPage.new(site, projectId, project['project_domain'])
+          site.pages << AtticBannerPage.new(site, project['project_id'], project['project_domain'])
         end
       end
     end

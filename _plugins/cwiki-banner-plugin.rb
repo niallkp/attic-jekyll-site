@@ -30,14 +30,14 @@ module CwikBanngerPlugin
     safe true
 
     def generate(site)
-      site.data['projects'].each do | projectId, project|
+      site.data['project_array'].each do | project |
         if project['wiki'] and project['wiki']['type'] == 'CWIKI'
           if project['wiki']['keys'] 
             project['wiki']['keys'] .each do | key |
-              site.pages << CwikiBannerPage.new(site, projectId, key)
+              site.pages << CwikiBannerPage.new(site, project['project_id'], key)
             end
           else
-            site.pages << CwikiBannerPage.new(site, projectId, projectId)
+            site.pages << CwikiBannerPage.new(site, project['project_id'], project['project_id'])
           end
         end
       end
