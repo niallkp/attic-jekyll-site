@@ -20,6 +20,8 @@ mailing_lists:
     - general
     - site-cvs
     - notifications
+wiki:
+    type: CWIKI
 related_projects:
     - name: Jakarta EE
       url: https://jakarta.ee/

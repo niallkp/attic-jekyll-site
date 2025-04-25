@@ -17,4 +17,6 @@ mailing_lists:
     - xindice-dev
     - uxindice-ser
 mailing_lists_prefix: xml
+wiki:
+    type: CWIKI
 

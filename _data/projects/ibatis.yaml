@@ -20,6 +20,8 @@ mailing_lists:
     - user-java
 issue_tracker:
     type: JIRA
+wiki:
+    type: CWIKI
 related_projects_text: >-
     The iBATIS committers moved over to MyBatis which is the natural successor to iBATIS.
 related_projects:

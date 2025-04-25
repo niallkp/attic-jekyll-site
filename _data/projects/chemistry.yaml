@@ -19,3 +19,7 @@ issue_tracker:
     type: JIRA
     keys:
       - CMIS
+wiki:
+    type: CWIKI
+    keys:
+      - cmis

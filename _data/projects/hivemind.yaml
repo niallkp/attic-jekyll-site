@@ -23,8 +23,8 @@ issue_tracker:
 wiki:
     type: CWIKI
     keys:
-        - HIVEMIND/Home
-        - HIVEMIND2/Index
+        - HIVEMIND
+        - HIVEMIND2
 related_projects:
     - name: Tapestry IoC
       url: https://tapestry.apache.org/ioc.html
