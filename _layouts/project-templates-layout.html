@@ -97,7 +97,7 @@ Mailing lists https://lists.apache.org/list.html?{{ page.project_id }}.apache.or
     {%- when "Subversion" %}
       SVN: https://svn.apache.org/repos/asf/{{ source_repo.path | default: page.project_id }}
     {%- when "Git" %}
-      Git: https://gitbox.apache.org/repos/asf#{{ source_repo.path | default: page.project_id }}.git
+      Git: https://gitbox.apache.org/repos/asf#{{ source_repo.path | default: page.project_id }}
     {%- else %}
       {{ source_repo.type}}: ???
     {%- endcase -%}
