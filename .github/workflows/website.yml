@@ -58,7 +58,7 @@ jobs:
           ruby --version
           bundle exec jekyll build -b /attic-jekyll-site
           cp -r _site/flagged/cwiki/* cwiki-retired
-          rm -rf _site/flagged
+          rm -rf _site/flagged/cwiki
       - name: 🚀 Add commit to the gh-pages branch
         working-directory: _site
         run: |
