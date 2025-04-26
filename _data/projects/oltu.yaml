@@ -1,7 +1,7 @@
 ---
 retirement_date: 2018-03-21
 attic_issue: ATTIC-168
-attic_date: 2018-07-01
+attic_date: 2018-07-11
 attic_banner: true
 project_description: >-
     Apache Oltu is an OAuth protocol implementation in Java. It also covers
