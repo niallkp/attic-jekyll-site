@@ -70,26 +70,7 @@ and its rendered HTML in [asf-site](https://github.com/apache/www-site/tree/asf-
 
 Let the users know that the PMC is moving into the Attic. Use the following template:
 
-```
-A heads up for the ${project} user community that the ${project} PMC has 
-been 'moved to the Attic'. This means that the ${project} developers (more 
-formally its Project Management Committee) have voted to retire ${project} 
-and move the responsibility for its oversight over to the Attic project.
-
-Loosely speaking this means that the projects resources will be moved to a 
-read-only state.
-
-You can read more about the Apache Attic and the process of moving to the 
-Attic at https://attic.apache.org.
-
-You can follow this process in JIRA: 
- 
-  https://issues.apache.org/jira/browse/ATTIC-${#}
-
-Thanks,
-
-${Name} on behalf of ${project} + the Attic.
-```
+{% include user-email-template.html name="${project}" attic_issue="ATTIC-${#}" %}
   
 
 Remember to [subscribe](https://www.apache.org/foundation/mailinglists.html) to the user
@@ -174,33 +155,7 @@ Sometimes, the user mailing list will not be shut down. If that is the case,
 it should be mentioned in the announce. e.g. add "The user mailing list remains open."
 after "change in url." below.
 
-```
-Announcing that the Apache ${project} committers have voted to retire
-the project due to inactivity. ${project} was {boilerplate}.
+{% include announce-email-template.html project_id="${project}" name="${project}" longname="${project}" description="${project} was {boilerplate}" %}
 
-Retiring a project is not as simple as turning everything off, as
-existing users need to both know that the project is retiring and
-retain access to the necessary information for their own development
-efforts.
-
-You can read more about ${project}'s retirement at:
-
-   https://attic.apache.org/projects/${project}.html
-
-The project's resources will continue to be available in a read-only state -
-website, mailing lists, wikis, git, downloads and bug tracker with no 
-change in url.
-
-Providing process and solutions to make it clear when an Apache
-project has reached its end of life is the role of the Apache Attic,
-and you can read more about that at:
-
-   https://attic.apache.org/
-
-Thanks,
-
-${NAME}
-on behalf of the Apache Attic and the now retired Apache ${project} project
-```  
 
 It's important to include the boilerplate from the project's site so people know what we're talking about.
