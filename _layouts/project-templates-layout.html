@@ -65,21 +65,9 @@ Make the following source repositories read-only:
 {{ source_repo.type}}
 {%- case source_repo.type %}
 {%- when "Subversion" %}
-{%- for path in source_repo.path %}
-{%- assign svn_path = path | prepend: "svn.apache.org/repos/asf/" %}
-https://{{ svn_path }}
-{%- else %}
-{%- assign svn_path = source_repo.path | default: page.project_id | prepend: "svn.apache.org/repos/asf/" %}
-https://{{ svn_path }}
-{%- endfor %}
+https://svn.apache.org/repos/asf/{{ source_repo.path | default: page.project_id }}
 {%- when "Git" %}
-{%- for path in source_repo.path %}
-{%- assign git_path = path | prepend: "gitbox.apache.org/repos/asf/" %}
-https://{{ git_path }}.git
-{%- else %}
-{%- assign git_path = source_repo.path | default: page.project_id | prepend: "gitbox.apache.org/repos/asf/" %}
-https://{{ git_path }}.git
-{%- endfor %}
+https://gitbox.apache.org/repos/asf#{{ source_repo.path | default: page.project_id }}.git
 {%- else %}
 ??? {{ source_repo.type}} ???
 {%- endcase %}
