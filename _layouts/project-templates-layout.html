@@ -20,6 +20,19 @@ layout: attic-layout
 Return to the <a href="{% link projects/{{ page.project_id }}.html %}">{{project_name}} summary</a>
 </p>
 
+<h4 id="attic-git">List of Git Repositories for {{project_name}}</h4>
+{%- assign git_repositories = site.data.git-repositories.projects[page.project_id].repositories %}
+<p>
+  <ul>
+  {%- for git_repo_hash in git_repositories -%}
+    <li>http://gitbox.apache.org/repos/asf/{{git_repo_hash[0]}}.git
+    </li>
+  {% else %}
+    <li>NONE</li>
+  {%- endfor %}
+  </ul>
+</p>
+
 <h4 id="attic-jira">Attic JIRA Template</h4>
 
 <p>
@@ -97,7 +110,7 @@ Mailing lists https://lists.apache.org/list.html?{{ page.project_id }}.apache.or
     {%- when "Subversion" %}
       SVN: https://svn.apache.org/repos/asf/{{ source_repo.path | default: page.project_id }}
     {%- when "Git" %}
-      Git: https://gitbox.apache.org/repos/asf#{{ source_repo.path | default: page.project_id }}
+      Git: https://gitbox.apache.org/repos/asf#{{ source_repo.path | default: page.project_id }}.git
     {%- else %}
       {{ source_repo.type}}: ???
     {%- endcase -%}
