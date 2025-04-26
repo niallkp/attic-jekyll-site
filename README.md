@@ -28,18 +28,17 @@ site locally.
 
 ## TODO
 This Poc is functional but there are a number of tasks remaining:
-  - Create data files for all Attic projects (currently only 13 are done)
   - Fix the Look & Feel
     - currently using the default Jekyll **Minima** theme
     - need to decide how the website should look and fix the page layout and how it looks
     - add standard "Apache" links
-  - Decide whether the **flag** functionality should be included
   - decide what to do about **revived** projects. From what I can see only
     **XMLBeans** & **Ambari** have been revived. We don't include Ambari but we
     have a page for XMLBeans (I think we don't bother with them)
   - Add script to generate _data/projects/<project>.yaml file from project id.
     Could this be a GHA that creates a PR?
     (I think any automatically created content needs to be reviewed before deployment)
+    - **why not just copy the _template?**
 
 
 ## Overview
