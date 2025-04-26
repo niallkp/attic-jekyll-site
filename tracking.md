@@ -13,7 +13,7 @@ title: Process Tracking
     <li><a href="https://www.apache.org/foundation/board/calendar.html">Board Minutes Calendar</a> to find "Terminate" resolutions</li>
     <li><a href="https://projects.apache.org/">Projects Directory</a> to check</li>
     <li><a href="https://issues.apache.org/jira/issues/?jql=status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20retire-project">Open Jira issues</a></li>
-    <li><a href="/process.html">Retirement Process Documentation</a></li>
+    <li><a href="{% link process.md %}">Retirement Process Documentation</a></li>
     </ul>
   </p>
 </div>
@@ -26,7 +26,7 @@ title: Process Tracking
     <tr>
       <td>{{ project.retirement_date | date: list_date_fmt }}</td>
       <td>{{ project.attic_date | date: list_date_fmt }}</td>
-      <td><a href="/projects/{{ project.project_id }}.html">Apache {{ project.project_name }}</a></td>
+      <td><a href="{% link projects/{{ project.project_id }}.html %}">Apache {{ project.project_name }}</a></td>
       <td>
       {%- if project.attic_issue -%}
         <a href="https://issues.apache.org/jira/browse/{{ project.attic_issue }}">{{ project.attic_issue }}</a>
