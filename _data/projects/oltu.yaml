@@ -22,5 +22,5 @@ issue_tracker:
 wiki:
     type: CWIKI
     keys:
-        - oltu
-        - amber
+        - OLTU
+        - AMBER
