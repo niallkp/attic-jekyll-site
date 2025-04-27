@@ -51,9 +51,6 @@ jobs:
         with:
           ruby-version: 3.2.3
           bundler-cache: true
-      - name: 📥 Fetch Git Repositories JSON
-        run: wget -O _data/git-repositories.json https://gitbox.apache.org/repositories.json
-        shell: bash
       - name: 🔧 Build site
         run: |
           rm -rf _site/*
